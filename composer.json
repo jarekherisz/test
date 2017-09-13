@@ -1,11 +1,27 @@
 {
-    "name": "herjar01/test",
-    "type": "project",
-    "authors": [
-        {
-            "name": "Jarek Herisz",
-            "email": "jarek@herisz.pl"
-        }
-    ],
-    "require": {}
+    "name": "jarekherisz/deploy",
+	"keywords" : [
+		"cli",
+		"deploy"
+	],
+	"version" : "dev-master",
+	"type" : "project",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Jarek",
+			"email" : "jarek@herisz.pl"
+		}
+	],
+	"require" : {
+		"symfony/console" : "2.6.*@dev",
+		"symfony/yaml" : "2.6.x-dev",
+		"monolog/monolog" : "~1.11",
+		"pimple/pimple" : "~3.0",
+		"cboden/ratchet": "^0.3.6"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"" : "src/"
+		}
+	}
 }
