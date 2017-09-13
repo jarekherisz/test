@@ -1,0 +1,11 @@
+{
+    "name": "herjar01/test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jarek Herisz",
+            "email": "jarek@herisz.pl"
+        }
+    ],
+    "require": {}
+}
