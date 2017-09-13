@@ -4,7 +4,6 @@
 		"cli",
 		"deploy"
 	],
-	"version" : "dev-master",
 	"type" : "project",
 	"license" : "MIT",
 	"authors" : [{
