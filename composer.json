@@ -5,6 +5,7 @@
 		"deploy"
 	],
 	"type" : "project",
+	"version" : "dev-master",	
 	"license" : "MIT",
 	"authors" : [{
 			"name" : "Jarek",
