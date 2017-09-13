@@ -1,15 +1,1 @@
-{
-    "packages": {
-        "herjar01/test": {
-            "0.0.1": {
-                "name": "herjar01/test",
-                "version": "0.0.1",
-                "source": {
-                    "url": "https://github.com/jarekherisz/test.git",
-                    "type": "git",
-                     "reference": "master"
-                }
-            }
-        }
-    }
-}
+
