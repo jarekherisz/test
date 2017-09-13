@@ -1,8 +1,8 @@
 {
     "packages": {
-        "herjar01/test": {
+        "jarekherisz/deploy": {
             "dev-master": {
-                "name": "herjar01/test",
+                "name": "jarekherisz/deploy",
                 "version": "dev-master",
                 "source": {
                     "url": "https://github.com/jarekherisz/test.git",
