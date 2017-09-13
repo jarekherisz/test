@@ -1,9 +1,9 @@
 {
     "packages": {
         "herjar01/test": {
-            "0.0.1": {
+            "dev-master": {
                 "name": "herjar01/test",
-                "version": "0.0.1",
+                "version": "dev-master",
                 "source": {
                     "url": "https://github.com/jarekherisz/test.git",
                     "type": "git",
