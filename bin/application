@@ -42,9 +42,22 @@ $container['logger'] = function() {
 
     return $logger;
 };
+try {
+    $container['environment'] = new Model\Environment($container);
+}catch (Exception $exception) {
+    $application->renderException(
+        $exception,
+        new Symfony\Component\Console\Output\ConsoleOutput()
+    );
+    exit(-1);
+}
+
 
 $application->add(
     new Commands\Deploy($container)
+);
+$application->add(
+    new Commands\Listener($container)
 );
 
 $application->run();

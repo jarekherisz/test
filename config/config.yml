@@ -1,0 +1,4 @@
+environment:
+    patch: /mnt/d/HERJAR01/tmp/deploy
+    config: config.yml
+    tmp:  tmp
