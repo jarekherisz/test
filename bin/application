@@ -13,17 +13,12 @@ define('APP_NAME',    'php-cli application');
 define('APP_VERSION', '0.0.1');
 define('DEBUG',       false);
 define('CONFIG',      __DIR__ . '/../config/config.yml');
-define('LOG_DIR',     __DIR__ . '/../logs/');
-define('LOG',         LOG_DIR . 'app.log');
 
 $application = new Application(APP_NAME, APP_VERSION);
 try {
     $config = Yaml::parse(file_get_contents(CONFIG));
     if ($config === CONFIG)
         throw new ErrorException('The configuration file was not found. Aborting.');
-
-    if (!is_writable(LOG_DIR))
-        throw new ErrorException('The logs directory is not writable. Aborting.');
 
 } catch (Exception $exception) {
     $application->renderException(
@@ -36,14 +31,20 @@ try {
 $container = new Container();
 
 $container['config'] = $config === null ? array() : $config;
-$container['logger'] = function() {
-    $logger = new Logger('app');
-    $logger->pushHandler(new StreamHandler(LOG));
 
-    return $logger;
-};
 try {
     $container['environment'] = new Model\Environment($container);
+
+    if (!is_writable(LOG_DIR))
+        throw new ErrorException('The logs directory is not writable. Aborting.');
+
+    $container['logger'] = function() {
+        $logger = new Logger('app');
+        $logger->pushHandler(new StreamHandler(container["config"]['log']['file']));
+
+        return $logger;
+    };
+
 }catch (Exception $exception) {
     $application->renderException(
         $exception,
