@@ -1,5 +1,5 @@
 ---
-name: Zgłoszenie błędu
+name: Bug report
 about: Create a report to help us improve
 
 ---
@@ -7,15 +7,16 @@ about: Create a report to help us improve
 **Opis błędu**
 Jasny i zwięzły opis błędu.
 
-**Opis jak można powtórzyć błąd*
-Steps to reproduce the behavior:
+**Aby powtórzyć błąd*
+Opis kroków jak można powtórzyć błąd:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Jaki jest spodziewany rezultat błędu**
-A clear and concise description of what you expected to happen.
+**Wynik błędnego działania**
+Jasny i zwięzły opis spodziewanego działania i  przykład błędnego.
+Pamiętaj że możesz dołączać zrzuty ekranu.
 
 **Środowisko (please complete the following information):**
  - System operacyjny: [e.g. iOS]
